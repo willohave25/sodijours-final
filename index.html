@@ -1,4 +1,10 @@
+Ah ! 🎯 **Exactement le problème !**
 
+Quand je donne le code en plusieurs parties, ça crée des erreurs de copie !
+
+Voici le code **COMPLET EN UNE SEULE FOIS** :
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -99,7 +105,6 @@
             box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
 
-        /* Sections visibility */
         .section {
             display: none;
         }
@@ -160,7 +165,6 @@
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
         }
 
-        /* Rubriques principales - Style Brevidis */
         .rubriques-section {
             padding: 100px 0 80px;
             background: linear-gradient(135deg, #f8fafc, #e2e8f0);
@@ -246,7 +250,6 @@
             font-size: 1.1rem;
         }
 
-        /* Product Grid Styles */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -329,7 +332,6 @@
             font-weight: 500;
         }
 
-        /* Product Detail Page */
         .product-detail {
             padding: 100px 0 80px;
             background: white;
@@ -880,8 +882,9 @@
                         </div>
                     </div>
 
-                    <div class="rubrique-card" onclick="showRubrique('telephones')">
+                    <div class="rubrique-card" onclick="showR
                         ```html
+                    <div class="rubrique-card" onclick="showRubrique('telephones')">
                         <div class="rubrique-image" style="background-image: url('')" data-bg="telephones">
                             <div class="rubrique-overlay">
                                 <div class="rubrique-title">Téléphones</div>
@@ -1221,10 +1224,8 @@
     </footer>
 
     <script>
-        // Cache timestamp pour anti-cache
         const cacheBreaker = Date.now();
         
-        // URLs des images avec anti-cache
         const imageUrls = {
             'panneaux-solaires': `https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=300&fit=crop&v=${cacheBreaker}`,
             'telephones': `https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500&h=300&fit=crop&v=${cacheBreaker}`,
@@ -1235,12 +1236,10 @@
             'about': `https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&v=${cacheBreaker}`
         };
 
-        // Fonction pour ajouter anti-cache aux images
         function addCacheBreaker(url) {
             return `${url}&t=${Date.now()}`;
         }
 
-        // Base de données des produits avec anti-cache
         const products = {
             'panneaux-solaires': [
                 {
@@ -1383,7 +1382,7 @@
                     id: 'macbook-pro-16-m3-max',
                     title: 'MacBook Pro 16" M3 Max',
                     brand: 'Apple',
-                    description: 'Ordinateur
+                    description: 'Ordinateur portable haut de gamme avec puce M3 Max, écran Liquid Retina XD
                         description: 'Ordinateur portable haut de gamme avec puce M3 Max, écran Liquid Retina XDR et performance exceptionnelle pour les créatifs et professionnels.',
                    mainImage: addCacheBreaker('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=300&fit=crop'),
                    images: [
@@ -1677,7 +1676,6 @@
 
        let currentRubrique = '';
 
-       // Charger les images de fond avec anti-cache
        function loadBackgroundImages() {
            document.querySelectorAll('[data-bg]').forEach(element => {
                const bgType = element.getAttribute('data-bg');
@@ -1694,7 +1692,6 @@
            });
        }
 
-       // Navigation functions
        function showSection(sectionId) {
            document.querySelectorAll('.section').forEach(section => {
                section.classList.remove('active');
@@ -1773,14 +1770,12 @@
            thumbnail.classList.add('active');
        }
 
-       // Contact form handling
        document.querySelector('.contact-form').addEventListener('submit', function(e) {
            e.preventDefault();
            alert('Merci pour votre demande ! Notre équipe vous contactera dans les plus brefs délais pour vous établir un devis personnalisé.');
            this.reset();
        });
 
-       // Initialize the page
        document.addEventListener('DOMContentLoaded', function() {
            loadBackgroundImages();
            showSection('accueil');
