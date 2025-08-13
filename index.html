@@ -1,3 +1,6 @@
+Voici le code complet qui se termine bien par `</body>` et `</html>` :
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +15,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
         }
@@ -24,8 +27,8 @@
         }
 
         header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             position: fixed;
             width: 100%;
             top: 0;
@@ -40,42 +43,58 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #2c5282;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo svg {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover svg {
+            transform: scale(1.05);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            color: #ffffff;
+            font-weight: 600;
+            transition: all 0.3s ease;
             cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
         }
 
         .nav-links a:hover {
-            color: #2c5282;
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
         }
 
         .contact-btn {
-            background: #2c5282;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
             color: white !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
             text-decoration: none;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         .contact-btn:hover {
-            background: #1a365d;
+            background: linear-gradient(135deg, #d97706, #b45309);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
 
         /* Sections visibility */
@@ -95,7 +114,7 @@
             display: flex;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg');
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.8)), url('https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg');
             background-size: cover;
             background-position: center;
         }
@@ -106,199 +125,206 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .features {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
+        .hero-btn {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
             color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
 
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2c5282;
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
         }
 
-        .feature-image {
-            margin-top: 1.5rem;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 150px;
-        }
-
-        .feature-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Products Section Styles */
-        .products-section {
+        /* Rubriques principales - Style Brevidis */
+        .rubriques-section {
             padding: 100px 0 80px;
-            background: #f8fafc;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
         }
 
-        .categories-grid {
+        .rubriques-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
-        .category-card {
+        .rubrique-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
             cursor: pointer;
+            border: 3px solid transparent;
         }
 
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        .rubrique-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: #3b82f6;
         }
 
-        .category-image {
-            height: 200px;
+        .rubrique-image {
+            height: 220px;
             background-size: cover;
             background-position: center;
             position: relative;
+            overflow: hidden;
         }
 
-        .category-overlay {
+        .rubrique-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+            background: linear-gradient(45deg, rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.6));
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .category-title {
+        .rubrique-card:hover .rubrique-overlay {
+            opacity: 1;
+        }
+
+        .rubrique-title {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .category-info {
-            padding: 1.5rem;
+        .rubrique-info {
+            padding: 2rem;
         }
 
-        .category-description {
-            color: #666;
+        .rubrique-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.8rem;
+        }
+
+        .rubrique-description {
+            color: #64748b;
             margin-bottom: 1rem;
+            font-size: 1.05rem;
         }
 
         .product-count {
-            color: #2c5282;
+            color: #f59e0b;
             font-weight: 600;
+            font-size: 1.1rem;
         }
 
         /* Product Grid Styles */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .product-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
             cursor: pointer;
+            border: 3px solid transparent;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #3b82f6;
         }
 
         .product-image {
-            height: 200px;
+            height: 250px;
             background-size: cover;
             background-position: center;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
         .product-info {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .product-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #2c5282;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #1e3a8a;
         }
 
         .product-brand {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            color: #f59e0b;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
         }
 
         .product-description {
-            color: #777;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
-        .product-price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #e53e3e;
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
 
         /* Product Detail Page */
@@ -320,77 +346,79 @@
 
         .main-image {
             width: 100%;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 20px;
             margin-bottom: 1rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .thumbnail-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
 
         .thumbnail {
             width: 100%;
-            height: 80px;
+            height: 90px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             opacity: 0.7;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
         }
 
         .thumbnail:hover,
         .thumbnail.active {
             opacity: 1;
+            border-color: #3b82f6;
+            transform: scale(1.05);
         }
 
         .product-details h1 {
-            font-size: 2.5rem;
-            color: #2c5282;
-            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            color: #1e3a8a;
+            margin-bottom: 0.8rem;
+            font-weight: 800;
         }
 
         .product-brand-detail {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .product-price-detail {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #e53e3e;
-            margin-bottom: 2rem;
+            color: #f59e0b;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
 
         .product-description-detail {
             color: #555;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.8;
             margin-bottom: 2rem;
         }
 
         .product-specs {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 2rem;
+            border-radius: 15px;
             margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .product-specs h3 {
-            color: #2c5282;
-            margin-bottom: 1rem;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
         }
 
         .spec-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #e2e8f0;
         }
 
         .spec-item:last-child {
@@ -403,29 +431,100 @@
         }
 
         .spec-value {
-            color: #666;
+            color: #64748b;
+            font-weight: 500;
         }
 
         .back-btn {
-            background: #666;
+            background: linear-gradient(135deg, #64748b, #475569);
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 0.8rem 1.8rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
             margin-bottom: 2rem;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
 
         .back-btn:hover {
-            background: #555;
+            background: linear-gradient(135deg, #475569, #334155);
+            transform: translateY(-2px);
+        }
+
+        .contact-info-btn {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .contact-info-btn:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            transform: translateY(-2px);
+        }
+
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #3b82f6;
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.2rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            font-weight: 700;
         }
 
         .about {
             padding: 80px 0;
-            background: white;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
         }
 
         .about-content {
@@ -436,27 +535,29 @@
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 2rem;
-            color: #2c5282;
+            color: #1e3a8a;
+            font-weight: 800;
         }
 
         .about-text p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 1.5rem;
             color: #555;
+            line-height: 1.8;
         }
 
         .about-image img {
             width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
 
         .stats {
-            background: linear-gradient(135deg, #2c5282, #1a365d);
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
         }
 
         .stats-grid {
@@ -467,19 +568,20 @@
         }
 
         .stat-item h3 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            opacity: 0.95;
         }
 
         .contact {
             padding: 80px 0;
-            background: #f8fafc;
+            background: white;
         }
 
         .contact-content {
@@ -489,123 +591,152 @@
         }
 
         .contact-info h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 2rem;
-            color: #2c5282;
+            color: #1e3a8a;
+            font-weight: 800;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: #2c5282;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1rem;
+            margin-right: 1.5rem;
             color: white;
+            font-size: 1.5rem;
         }
 
         .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
             color: #333;
+            font-size: 1.1rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
+            padding: 1rem;
+            border: 3px solid #e2e8f0;
+            border-radius: 12px;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            background: white;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #2c5282;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 1rem 2rem;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 12px;
+            font-size: 1.2rem;
             cursor: pointer;
             width: 100%;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #1e40af, #1e3a8a);
+            transform: translateY(-2px);
         }
 
         footer {
-            background: #1a202c;
+            background: linear-gradient(135deg, #1a202c, #2d3748);
             color: white;
-            padding: 40px 0 20px;
+            padding: 60px 0 30px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 3rem;
             margin-bottom: 2rem;
         }
 
         .footer-section h3 {
-            margin-bottom: 1rem;
-            color: #667eea;
+            margin-bottom: 1.5rem;
+            color: #3b82f6;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .footer-section p,
         .footer-section a {
-            color: #a0aec0;
+            color: #cbd5e1;
             text-decoration: none;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #3b82f6;
         }
 
         .footer-bottom {
-            border-top: 1px solid #2d3748;
-            padding-top: 1rem;
+            border-top: 2px solid #374151;
+            padding-top: 2rem;
             text-align: center;
-            color: #a0aec0;
+            color: #9ca3af;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
-            color: #2c5282;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
         .section-header p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 600px;
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
         @media (max-width: 768px) {
@@ -613,7 +744,7 @@
                 display: none;
             }
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             .about-content,
             .contact-content,
@@ -624,9 +755,15 @@
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .categories-grid,
+            .rubriques-grid,
             .products-grid {
                 grid-template-columns: 1fr;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section-header h2 {
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -634,10 +771,63 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo" onclick="showSection('accueil')">Sodijours</div>
+            <div class="logo" onclick="showSection('accueil')">
+                <svg width="180" height="50" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background for contrast -->
+                  <rect width="300" height="120" fill="white" opacity="0.95" rx="10"/>
+                  
+                  <!-- Main logo symbol -->
+                  <g transform="translate(150, 35)">
+                    <!-- Outer ring - blue gradient -->
+                    <path d="M -25 -15 Q -35 -25, -25 -35 Q -15 -45, 5 -35 Q 15 -25, 25 -15 Q 35 -5, 25 5 Q 15 15, -5 5 Q -15 -5, -25 -15 Z" 
+                          fill="url(#blueGradient)" opacity="0.8"/>
+                    
+                    <!-- Inner ring - green gradient -->
+                    <path d="M 15 -20 Q 25 -30, 35 -20 Q 45 -10, 35 0 Q 25 10, 15 0 Q 5 -10, 15 -20 Z" 
+                          fill="url(#greenGradient)" opacity="0.9"/>
+                    
+                    <!-- Center ring - orange gradient -->
+                    <path d="M -10 10 Q -20 0, -10 -10 Q 0 -20, 10 -10 Q 20 0, 10 10 Q 0 20, -10 10 Z" 
+                          fill="url(#orangeGradient)"/>
+                    
+                    <!-- Small accent circles -->
+                    <circle cx="-30" cy="0" r="4" fill="#1e3a8a"/>
+                    <circle cx="30" cy="5" r="3" fill="#10b981"/>
+                    <circle cx="0" cy="-25" r="3" fill="#f59e0b"/>
+                  </g>
+                  
+                  <!-- Company name -->
+                  <text x="150" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">
+                    SODIJOURS
+                  </text>
+                  
+                  <!-- Tagline -->
+                  <text x="150" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#64748b">
+                    GROSSISTE PROFESSIONNEL
+                  </text>
+                  
+                  <!-- Gradients definitions -->
+                  <defs>
+                    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+            </div>
             <ul class="nav-links">
                 <li><a onclick="showSection('accueil')">Accueil</a></li>
-                <li><a onclick="showSection('produits')">Produits</a></li>
+                <li><a onclick="showSection('rubriques')">Nos Rubriques</a></li>
                 <li><a onclick="showSection('services')">Services</a></li>
                 <li><a onclick="showSection('apropos')">À Propos</a></li>
                 <li><a onclick="showSection('contact')">Contact</a></li>
@@ -651,9 +841,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Votre Partenaire Grossiste de Confiance</h1>
-                    <p>Plus de 50 ans d'expérience dans la fourniture de produits de qualité pour les professionnels et particuliers</p>
-                    <a class="contact-btn" onclick="showSection('contact')">Découvrir nos services</a>
+                    <h1>Sodijours - Grossiste Professionnel</h1>
+                    <p>Votre partenaire de confiance pour les équipements électroniques, électroménager et produits spécialisés depuis plus de 50 ans</p>
+                    <a class="hero-btn" onclick="showSection('rubriques')">Découvrir nos rubriques</a>
                 </div>
             </div>
         </section>
@@ -666,15 +856,15 @@
                         <p>Années d'Expérience</p>
                     </div>
                     <div class="stat-item">
-                        <h3>26 500+</h3>
+                        <h3>10 000+</h3>
                         <p>Références Produits</p>
                     </div>
                     <div class="stat-item">
-                        <h3>1 150+</h3>
+                        <h3>500+</h3>
                         <p>Marques Partenaires</p>
                     </div>
                     <div class="stat-item">
-                        <h3>50+</h3>
+                        <h3>40+</h3>
                         <p>Pays de Livraison</p>
                     </div>
                 </div>
@@ -682,61 +872,93 @@
         </section>
     </div>
 
-    <!-- Section Produits -->
-    <div id="produits" class="section">
-        <section class="products-section">
+    <!-- Section Rubriques -->
+    <div id="rubriques" class="section">
+        <section class="rubriques-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Nos Produits</h2>
-                    <p>Découvrez notre large gamme de produits sélectionnés pour leur qualité</p>
+                    <h2>Nos Rubriques Produits</h2>
+                    <p>Découvrez notre large gamme de produits professionnels sélectionnés pour leur qualité et performance</p>
                 </div>
                 
-                <div class="categories-grid">
-                    <div class="category-card" onclick="showCategory('alimentaire')">
-                        <div class="category-image" style="background-image: url('https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg')">
-                            <div class="category-overlay">
-                                <div class="category-title">Produits Alimentaires</div>
+                <div class="rubriques-grid">
+                    <div class="rubrique-card" onclick="showRubrique('panneaux-solaires')">
+                        <div class="rubrique-image" style="background-image: url('https://images.pexels.com/photos/9875409/pexels-photo-9875409.jpeg')">
+                            <div class="rubrique-overlay">
+                                <div class="rubrique-title">Panneaux Solaires</div>
                             </div>
                         </div>
-                        <div class="category-info">
-                            <div class="category-description">Épicerie sucrée, salée, conserves, boissons et produits frais</div>
-                            <div class="product-count">Plus de 15 000 références</div>
+                        <div class="rubrique-info">
+                            <div class="rubrique-name">Énergie Solaire Photovoltaïque</div>
+                            <div class="rubrique-description">Solutions d'énergie renouvelable avec panneaux solaires haute performance pour installations résidentielles et commerciales</div>
+                            <div class="product-count">Plus de 50 références</div>
                         </div>
                     </div>
 
-                    <div class="category-card" onclick="showCategory('hygiene')">
-                        <div class="category-image" style="background-image: url('https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg')">
-                            <div class="category-overlay">
-                                <div class="category-title">Hygiène & Beauté</div>
+                    <div class="rub
+                        ```html
+                    <div class="rubrique-card" onclick="showRubrique('telephones')">
+                        <div class="rubrique-image" style="background-image: url('https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg')">
+                            <div class="rubrique-overlay">
+                                <div class="rubrique-title">Téléphones</div>
                             </div>
                         </div>
-                        <div class="category-info">
-                            <div class="category-description">Produits d'hygiène corporelle, cosmétiques et soins</div>
-                            <div class="product-count">Plus de 5 000 références</div>
+                        <div class="rubrique-info">
+                            <div class="rubrique-name">Téléphones Dernière Génération</div>
+                            <div class="rubrique-description">Smartphones et téléphones mobiles des plus grandes marques avec les dernières technologies et innovations</div>
+                            <div class="product-count">Plus de 80 références</div>
                         </div>
                     </div>
 
-                    <div class="category-card" onclick="showCategory('entretien')">
-                        <div class="category-image" style="background-image: url('https://images.pexels.com/photos/4239037/pexels-photo-4239037.jpeg')">
-                            <div class="category-overlay">
-                                <div class="category-title">Produits d'Entretien</div>
+                    <div class="rubrique-card" onclick="showRubrique('ordinateurs')">
+                        <div class="rubrique-image" style="background-image: url('https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg')">
+                            <div class="rubrique-overlay">
+                                <div class="rubrique-title">Ordinateurs</div>
                             </div>
                         </div>
-                        <div class="category-info">
-                            <div class="category-description">Nettoyants, désinfectants et produits de maintenance</div>
-                            <div class="product-count">Plus de 3 000 références</div>
+                        <div class="rubrique-info">
+                            <div class="rubrique-name">Ordinateurs Haute Performance</div>
+                            <div class="rubrique-description">Ordinateurs de bureau et portables premium pour professionnels et particuliers exigeants</div>
+                            <div class="product-count">Plus de 60 références</div>
                         </div>
                     </div>
 
-                    <div class="category-card" onclick="showCategory('maison')">
-                        <div class="category-image" style="background-image: url('https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg')">
-                            <div class="category-overlay">
-                                <div class="category-title">Articles Maison</div>
+                    <div class="rubrique-card" onclick="showRubrique('electromenager')">
+                        <div class="rubrique-image" style="background-image: url('https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg')">
+                            <div class="rubrique-overlay">
+                                <div class="rubrique-title">Électroménager</div>
                             </div>
                         </div>
-                        <div class="category-info">
-                            <div class="category-description">Électroménager, décoration et accessoires pour la maison</div>
-                            <div class="product-count">Plus de 3 500 références</div>
+                        <div class="rubrique-info">
+                            <div class="rubrique-name">Gros Électroménager</div>
+                            <div class="rubrique-description">Machines à laver, lave-vaisselle, climatiseurs, micro-ondes et appareils électriques pour la maison</div>
+                            <div class="product-count">Plus de 120 références</div>
+                        </div>
+                    </div>
+
+                    <div class="rubrique-card" onclick="showRubrique('animaux')">
+                        <div class="rubrique-image" style="background-image: url('https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg')">
+                            <div class="rubrique-overlay">
+                                <div class="rubrique-title">Animaux</div>
+                            </div>
+                        </div>
+                        <div class="rubrique-info">
+                            <div class="rubrique-name">Produits pour Animaux</div>
+                            <div class="rubrique-description">Alimentation premium pour chiens, chats et autres animaux domestiques des meilleures marques</div>
+                            <div class="product-count">Plus de 200 références</div>
+                        </div>
+                    </div>
+
+                    <div class="rubrique-card" onclick="showRubrique('autres-electriques')">
+                        <div class="rubrique-image" style="background-image: url('https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg')">
+                            <div class="rubrique-overlay">
+                                <div class="rubrique-title">Autres Électriques</div>
+                            </div>
+                        </div>
+                        <div class="rubrique-info">
+                            <div class="rubrique-name">Appareils Électriques Divers</div>
+                            <div class="rubrique-description">Large gamme d'appareils électriques pour tous vos besoins domestiques et professionnels</div>
+                            <div class="product-count">Plus de 150 références</div>
                         </div>
                     </div>
                 </div>
@@ -744,68 +966,102 @@
         </section>
     </div>
 
-    <!-- Catégorie Alimentaire -->
-    <div id="category-alimentaire" class="section">
-        <section class="products-section">
+    <!-- Rubrique Panneaux Solaires -->
+    <div id="rubrique-panneaux-solaires" class="section">
+        <section class="rubriques-section">
             <div class="container">
-                <button class="back-btn" onclick="showSection('produits')">← Retour aux catégories</button>
+                <button class="back-btn" onclick="showSection('rubriques')">← Retour aux rubriques</button>
                 <div class="section-header">
-                    <h2>Produits Alimentaires</h2>
-                    <p>Une sélection premium de produits alimentaires pour tous vos besoins</p>
+                    <h2>Panneaux Solaires Photovoltaïques</h2>
+                    <p>Solutions d'énergie renouvelable haute performance pour tous types d'installations</p>
                 </div>
                 
-                <div class="products-grid" id="alimentaire-products">
+                <div class="products-grid" id="panneaux-solaires-products">
                     <!-- Products will be populated by JavaScript -->
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Catégorie Hygiène -->
-    <div id="category-hygiene" class="section">
-        <section class="products-section">
+    <!-- Rubrique Téléphones -->
+    <div id="rubrique-telephones" class="section">
+        <section class="rubriques-section">
             <div class="container">
-                <button class="back-btn" onclick="showSection('produits')">← Retour aux catégories</button>
+                <button class="back-btn" onclick="showSection('rubriques')">← Retour aux rubriques</button>
                 <div class="section-header">
-                    <h2>Hygiène & Beauté</h2>
-                    <p>Produits d'hygiène et de beauté des plus grandes marques</p>
+                    <h2>Téléphones Dernière Génération</h2>
+                    <p>Smartphones et téléphones mobiles avec les dernières innovations technologiques</p>
                 </div>
                 
-                <div class="products-grid" id="hygiene-products">
+                <div class="products-grid" id="telephones-products">
                     <!-- Products will be populated by JavaScript -->
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Catégorie Entretien -->
-    <div id="category-entretien" class="section">
-        <section class="products-section">
+    <!-- Rubrique Ordinateurs -->
+    <div id="rubrique-ordinateurs" class="section">
+        <section class="rubriques-section">
             <div class="container">
-                <button class="back-btn" onclick="showSection('produits')">← Retour aux catégories</button>
+                <button class="back-btn" onclick="showSection('rubriques')">← Retour aux rubriques</button>
                 <div class="section-header">
-                    <h2>Produits d'Entretien</h2>
-                    <p>Solutions complètes pour l'entretien et la propreté</p>
+                    <h2>Ordinateurs Haute Performance</h2>
+                    <p>Ordinateurs de bureau et portables premium pour tous vos besoins professionnels</p>
                 </div>
                 
-                <div class="products-grid" id="entretien-products">
+                <div class="products-grid" id="ordinateurs-products">
                     <!-- Products will be populated by JavaScript -->
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Catégorie Maison -->
-    <div id="category-maison" class="section">
-        <section class="products-section">
+    <!-- Rubrique Électroménager -->
+    <div id="rubrique-electromenager" class="section">
+        <section class="rubriques-section">
             <div class="container">
-                <button class="back-btn" onclick="showSection('produits')">← Retour aux catégories</button>
+                <button class="back-btn" onclick="showSection('rubriques')">← Retour aux rubriques</button>
                 <div class="section-header">
-                    <h2>Articles Maison</h2>
-                    <p>Tout pour équiper et décorer votre intérieur</p>
+                    <h2>Gros Électroménager</h2>
+                    <p>Appareils électroménagers de qualité pour équiper votre maison</p>
                 </div>
                 
-                <div class="products-grid" id="maison-products">
+                <div class="products-grid" id="electromenager-products">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rubrique Animaux -->
+    <div id="rubrique-animaux" class="section">
+        <section class="rubriques-section">
+            <div class="container">
+                <button class="back-btn" onclick="showSection('rubriques')">← Retour aux rubriques</button>
+                <div class="section-header">
+                    <h2>Produits Alimentaires pour Animaux</h2>
+                    <p>Alimentation premium et accessoires pour tous vos animaux domestiques</p>
+                </div>
+                
+                <div class="products-grid" id="animaux-products">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rubrique Autres Électriques -->
+    <div id="rubrique-autres-electriques" class="section">
+        <section class="rubriques-section">
+            <div class="container">
+                <button class="back-btn" onclick="showSection('rubriques')">← Retour aux rubriques</button>
+                <div class="section-header">
+                    <h2>Autres Appareils Électriques</h2>
+                    <p>Large gamme d'appareils électriques pour tous vos besoins</p>
+                </div>
+                
+                <div class="products-grid" id="autres-electriques-products">
                     <!-- Products will be populated by JavaScript -->
                 </div>
             </div>
@@ -816,7 +1072,7 @@
     <div id="product-detail" class="section">
         <section class="product-detail">
             <div class="container">
-                <button class="back-btn" id="back-to-category">← Retour à la catégorie</button>
+                <button class="back-btn" id="back-to-rubrique">← Retour à la rubrique</button>
                 <div class="product-detail-content">
                     <div class="product-gallery">
                         <img id="main-product-image" class="main-image" src="" alt="">
@@ -827,14 +1083,14 @@
                     <div class="product-details">
                         <h1 id="product-title"></h1>
                         <div id="product-brand" class="product-brand-detail"></div>
-                        <div id="product-price" class="product-price-detail"></div>
                         <div id="product-description" class="product-description-detail"></div>
                         <div class="product-specs">
-                            <h3>Caractéristiques</h3>
+                            <h3>Caractéristiques Techniques</h3>
                             <div id="product-specs-list">
                                 <!-- Specs will be populated by JavaScript -->
                             </div>
                         </div>
+                        <a class="contact-info-btn" onclick="showSection('contact')">Demander un devis</a>
                     </div>
                 </div>
             </div>
@@ -843,60 +1099,42 @@
 
     <!-- Section Services -->
     <div id="services" class="section">
-        <section class="features">
+        <section class="services">
             <div class="container">
                 <div class="section-header">
-                    <h2>Pourquoi nous choisir ?</h2>
-                    <p>Découvrez les avantages qui font de nous votre partenaire idéal</p>
+                    <h2>Nos Services Professionnels</h2>
+                    <p>Des solutions complètes pour accompagner votre business</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">💰</div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">💰</div>
                         <h3>Prix Compétitifs</h3>
-                        <p>Bénéficiez de tarifs préférentiels et de remises en gros sur une large gamme de produits.</p>
-                        <div class="feature-image">
-                            <img src="https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg" alt="Prix compétitifs">
-                        </div>
+                        <p>Bénéficiez de tarifs préférentiels grâce à notre réseau de fournisseurs partenaires et nos volumes d'achat optimisés.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📦</div>
-                        <h3>Vaste Sélection</h3>
-                        <p>Plus de 26 500 références de 1150+ marques pour répondre à tous vos besoins professionnels.</p>
-                        <div class="feature-image">
-                            <img src="https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg" alt="Vaste sélection produits">
-                        </div>
+                    <div class="service-card">
+                        <div class="service-icon">📦</div>
+                        <h3>Large Catalogue</h3>
+                        <p>Plus de 10 000 références dans l'électronique, l'électroménager et les produits spécialisés.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🚚</div>
+                    <div class="service-card">
+                        <div class="service-icon">🚚</div>
                         <h3>Livraison Rapide</h3>
-                        <p>Service de livraison efficace dans plus de 50 pays pour votre satisfaction client.</p>
-                        <div class="feature-image">
-                            <img src="https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg" alt="Livraison rapide">
-                        </div>
+                        <p>Service de livraison efficace et sécurisé dans plus de 40 pays avec suivi en temps réel.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">👥</div>
-                        <h3>Service Client Expert</h3>
-                        <p>Une équipe dédiée et expérimentée pour répondre à tous vos besoins spécifiques.</p>
-                        <div class="feature-image">
-                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Service client expert">
-                        </div>
+                    <div class="service-card">
+                        <div class="service-icon">👥</div>
+                        <h3>Support Expert</h3>
+                        <p>Équipe technique spécialisée pour vous conseiller dans le choix de vos équipements.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">✅</div>
-                        <h3>Qualité Garantie</h3>
-                        <p>Produits sélectionnés rigoureusement selon les plus hauts standards de qualité.</p>
-                        <div class="feature-image">
-                            <img src="https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg" alt="Qualité garantie">
-                        </div>
+                    <div class="service-card">
+                        <div class="service-icon">✅</div>
+                        <h3>Garantie Qualité</h3>
+                        <p>Tous nos produits sont certifiés et bénéficient de garanties constructeur étendues.</p>
                     </div>
-                                            <div class="feature-card">
-                        <div class="feature-icon">🌍</div>
-                        <h3>Portée Internationale</h3>
-                        <p>Distribution mondiale avec une logistique optimisée pour votre business.</p>
-                        <div class="feature-image">
-                            <img src="https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg" alt="Portée internationale">
-                        </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Service Après-Vente</h3>
+                        <p>Support technique et maintenance pour tous vos équipements avec intervention rapide.</p>
                     </div>
                 </div>
             </div>
@@ -909,10 +1147,10 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-text">
-                        <h2>À Propos de Nous</h2>
-                        <p>Forte de plus de 50 ans d'expérience, notre entreprise est spécialisée dans la fourniture d'une large gamme de produits alimentaires et non alimentaires destinés aux professionnels et aux particuliers.</p>
-                        <p>Notre expertise et notre connaissance approfondie du marché nous permettent de proposer des solutions adaptées à chaque client, qu'il soit gérant d'un supermarché, d'une épicerie ou d'une supérette.</p>
-                        <p>Avec notre catalogue comprenant plus de 26 500 références provenant de plus de 1150 marques, nous nous engageons à fournir des produits de qualité à des prix compétitifs.</p>
+                        <h2>À Propos de Sodijours</h2>
+                        <p>Depuis plus de 50 ans, Sodijours s'est imposé comme un acteur majeur de la distribution professionnelle d'équipements électroniques et électroménagers.</p>
+                        <p>Notre expertise couvre un large éventail de domaines : panneaux solaires photovoltaïques, téléphonie mobile dernière génération, informatique haute performance, électroménager et produits spécialisés.</p>
+                        <p>Nous accompagnons les professionnels et particuliers exigeants en leur proposant des solutions adaptées à leurs besoins spécifiques, avec un service client d'excellence et des prix compétitifs.</p>
                     </div>
                     <div class="about-image">
                         <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg" alt="Entrepôt moderne Sodijours">
@@ -928,7 +1166,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Contactez-nous</h2>
-                    <p>Prêt à commencer ? Contactez notre équipe pour discuter de vos besoins</p>
+                    <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
                 </div>
                 <div class="contact-content">
                     <div class="contact-info">
@@ -979,10 +1217,14 @@
                             <input type="text" id="entreprise" name="entreprise">
                         </div>
                         <div class="form-group">
+                            <label for="produit">Produit d'intérêt</label>
+                            <input type="text" id="produit" name="produit" placeholder="Quel produit vous intéresse ?">
+                        </div>
+                        <div class="form-group">
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Envoyer le Message</button>
+                        <button type="submit" class="submit-btn">Envoyer la demande</button>
                     </form>
                 </div>
             </div>
@@ -994,21 +1236,23 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Sodijours</h3>
-                    <p>Votre partenaire grossiste de confiance depuis plus de 50 ans. Nous fournissons des produits de qualité aux professionnels et particuliers.</p>
+                    <p>Votre partenaire grossiste de confiance depuis plus de 50 ans. Spécialiste en équipements électroniques, électroménager et produits techniques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Nos Rubriques</h3>
+                    <a href="#" onclick="showRubrique('panneaux-solaires')">Panneaux Solaires</a>
+                    <a href="#" onclick="showRubrique('telephones')">Téléphones</a>
+                    <a href="#" onclick="showRubrique('ordinateurs')">Ordinateurs</a>
+                    <a href="#" onclick="showRubrique('electromenager')">Électroménager</a>
+                    <a href="#" onclick="showRubrique('animaux')">Produits Animaux</a>
+                    <a href="#" onclick="showRubrique('autres-electriques')">Autres Électriques</a>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
-                    <a href="#" onclick="showSection('services')">Vente en Gros</a>
-                    <a href="#" onclick="showSection('services')">Distribution</a>
-                    <a href="#" onclick="showSection('services')">Logistique</a>
-                    <a href="#" onclick="showSection('services')">Conseil</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Secteurs</h3>
-                    <a href="#" onclick="showCategory('alimentaire')">Alimentaire</a>
-                    <a href="#" onclick="showCategory('hygiene')">Hygiène & Beauté</a>
-                    <a href="#" onclick="showCategory('entretien')">Produits d'Entretien</a>
-                    <a href="#" onclick="showCategory('maison')">Articles Maison</a>
+                    <a href="#" onclick="showSection('services')">Conseil Technique</a>
+                    <a href="#" onclick="showSection('services')">Livraison</a>
+                    <a href="#" onclick="showSection('services')">SAV</a>
+                    <a href="#" onclick="showSection('services')">Garanties</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -1025,261 +1269,443 @@
     </footer>
 
     <script>
-        // Base de données des produits
+        // Base de données des produits par rubrique
         const products = {
-            alimentaire: [
+            'panneaux-solaires': [
                 {
-                    id: 'nestle-chocolat-au-lait',
-                    title: 'Tablette Chocolat au Lait',
-                    brand: 'Nestlé',
-                    price: '2,85 €',
-                    description: 'Délicieuse tablette de chocolat au lait onctueux, fabriquée avec les meilleurs ingrédients. Parfaite pour les gourmands de tous âges.',
-                    mainImage: 'https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg',
+                    id: 'panneau-monocristallin-400w',
+                    title: 'Panneau Solaire Monocristallin 400W',
+                    brand: 'SunPower',
+                    description: 'Panneau solaire monocristallin haute efficacité de 400W. Technologie Maxeon pour performance optimale et durabilité exceptionnelle. Idéal pour installations résidentielles et commerciales.',
+                    mainImage: 'https://images.pexels.com/photos/9875409/pexels-photo-9875409.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg',
-                        'https://images.pexels.com/photos/918327/pexels-photo-918327.jpeg',
-                        'https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg',
-                        'https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg'
+                        'https://images.pexels.com/photos/9875409/pexels-photo-9875409.jpeg',
+                        'https://images.pexels.com/photos/9875401/pexels-photo-9875401.jpeg',
+                        'https://images.pexels.com/photos/9875403/pexels-photo-9875403.jpeg',
+                        'https://images.pexels.com/photos/9875405/pexels-photo-9875405.jpeg'
                     ],
                     specs: {
-                        'Poids': '100g',
-                        'Origine': 'France',
-                        'Conditionnement': 'Carton de 20 tablettes',
-                        'Date limite': '12 mois',
-                        'Certification': 'UTZ Certified',
-                        'Allergènes': 'Lait, peut contenir des traces de fruits à coque'
+                        'Puissance': '400W',
+                        'Efficacité': '22.8%',
+                        'Technologie': 'Monocristallin Maxeon',
+                        'Dimensions': '1690 x 1046 x 40 mm',
+                        'Poids': '20.6 kg',
+                        'Garantie': '25 ans produit et performance',
+                        'Certification': 'IEC 61215, IEC 61730, CE'
                     }
                 },
                 {
-                    id: 'barilla-penne-rigate',
-                    title: 'Penne Rigate',
-                    brand: 'Barilla',
-                    price: '1,45 €',
-                    description: 'Pâtes italiennes traditionnelles de qualité premium. Texture parfaite qui retient bien les sauces.',
-                    mainImage: 'https://images.pexels.com/photos/1268549/pexels-photo-1268549.jpeg',
+                    id: 'panneau-polycristallin-300w',
+                    title: 'Panneau Solaire Polycristallin 300W',
+                    brand: 'Canadian Solar',
+                    description: 'Panneau solaire polycristallin 300W avec excellent rapport qualité-prix. Technologie PERC pour performance améliorée dans toutes conditions d\'éclairage.',
+                    mainImage: 'https://images.pexels.com/photos/9875401/pexels-photo-9875401.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/1268549/pexels-photo-1268549.jpeg',
-                        'https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg',
-                        'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg',
-                        'https://images.pexels.com/photos/1471679/pexels-photo-1471679.jpeg'
+                        'https://images.pexels.com/photos/9875401/pexels-photo-9875401.jpeg',
+                        'https://images.pexels.com/photos/9875409/pexels-photo-9875409.jpeg',
+                        'https://images.pexels.com/photos/9875403/pexels-photo-9875403.jpeg',
+                        'https://images.pexels.com/photos/9875405/pexels-photo-9875405.jpeg'
                     ],
                     specs: {
-                        'Poids': '500g',
-                        'Origine': 'Italie',
-                        'Temps de cuisson': '11-12 minutes',
-                        'Conditionnement': 'Carton de 24 paquets',
-                        'Conservation': '36 mois',
-                        'Ingrédients': 'Semoule de blé dur, eau'
+                        'Puissance': '300W',
+                        'Efficacité': '18.5%',
+                        'Technologie': 'Polycristallin PERC',
+                        'Dimensions': '1665 x 1002 x 35 mm',
+                        'Poids': '18.5 kg',
+                        'Garantie': '12 ans produit, 25 ans performance',
+                        'Température': '-40°C à +85°C'
                     }
                 },
                 {
-                    id: 'coca-cola-classic',
-                    title: 'Coca-Cola Classic',
-                    brand: 'Coca-Cola',
-                    price: '24,50 €',
-                    description: 'La boisson rafraîchissante mondialement connue. Pack de 24 canettes pour professionnels.',
-                    mainImage: 'https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg',
+                    id: 'kit-solaire-complet-3kw',
+                    title: 'Kit Solaire Complet 3kW',
+                    brand: 'Victron Energy',
+                    description: 'Kit solaire complet incluant panneaux, onduleur, batteries et accessoires. Solution clé en main pour autoconsommation résidentielle.',
+                    mainImage: 'https://images.pexels.com/photos/9875403/pexels-photo-9875403.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg',
-                        'https://images.pexels.com/photos/3008456/pexels-photo-3008456.jpeg',
-                        'https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg',
-                        'https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg'
+                        'https://images.pexels.com/photos/9875403/pexels-photo-9875403.jpeg',
+                        'https://images.pexels.com/photos/9875409/pexels-photo-9875409.jpeg',
+                        'https://images.pexels.com/photos/9875401/pexels-photo-9875401.jpeg',
+                        'https://images.pexels.com/photos/9875405/pexels-photo-9875405.jpeg'
                     ],
                     specs: {
-                        'Contenance': '33cl par canette',
-                        'Conditionnement': 'Pack de 24 canettes',
-                        'Origine': 'France',
-                        'Conservation': '12 mois',
-                        'Température': 'Servir frais (4-6°C)',
-                        'Ingrédients': 'Eau gazéifiée, sucre, colorant caramel, acidifiant, arôme naturel, caféine'
-                    }
-                },
-                {
-                    id: 'huile-olive-extra-vierge',
-                    title: 'Huile d\'Olive Extra Vierge',
-                    brand: 'Puget',
-                    price: '8,90 €',
-                    description: 'Huile d\'olive extra vierge de première pression à froid. Goût fruité et authentique.',
-                    mainImage: 'https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg',
-                    images: [
-                        'https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg',
-                        'https://images.pexels.com/photos/1022385/pexels-photo-1022385.jpeg',
-                        'https://images.pexels.com/photos/1346155/pexels-photo-1346155.jpeg',
-                        'https://images.pexels.com/photos/198172/pexels-photo-198172.jpeg'
-                    ],
-                    specs: {
-                        'Contenance': '500ml',
-                        'Origine': 'Espagne',
-                        'Acidité': '≤ 0,8%',
-                        'Conditionnement': 'Carton de 12 bouteilles',
-                        'Conservation': '18 mois',
-                        'Extraction': 'Première pression à froid'
+                        'Puissance totale': '3000W',
+                        'Panneaux inclus': '10 x 300W',
+                        'Onduleur': 'Victron MultiPlus 3000VA',
+                        'Batteries': '4 x 100Ah Lithium',
+                        'Régulateur': 'MPPT 100/50',
+                        'Monitoring': 'Victron Connect App',
+                        'Installation': 'Guide inclus'
                     }
                 }
             ],
-            hygiene: [
+            'telephones': [
                 {
-                    id: 'head-shoulders-classic',
-                    title: 'Shampooing Antipelliculaire Classic',
-                    brand: 'Head & Shoulders',
-                    price: '4,25 €',
-                    description: 'Shampooing antipelliculaire efficace contre les pellicules visibles. Formule cliniquement prouvée.',
-                    mainImage: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
+                    id: 'iphone-15-pro-max',
+                    title: 'iPhone 15 Pro Max',
+                    brand: 'Apple',
+                    description: 'Le smartphone le plus avancé d\'Apple avec puce A17 Pro, système de caméras Pro et écran Super Retina XDR. Design en titane pour une résistance exceptionnelle.',
+                    mainImage: 'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
-                        'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
-                        'https://images.pexels.com/photos/7262946/pexels-photo-7262946.jpeg',
-                        'https://images.pexels.com/photos/4465421/pexels-photo-4465421.jpeg'
+                        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg',
+                        'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg',
+                        'https://images.pexels.com/photos/1739856/pexels-photo-1739856.jpeg',
+                        'https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg'
                     ],
                     specs: {
-                        'Contenance': '250ml',
-                        'Type de cheveux': 'Tous types',
-                        'Conditionnement': 'Carton de 12 flacons',
-                        'Utilisation': 'Usage quotidien',
-                        'pH': 'Équilibré',
-                        'Actif principal': 'Pyrithione de zinc'
+                        'Écran': '6.7" Super Retina XDR',
+                        'Processeur': 'A17 Pro',
+                        'Stockage': '256GB / 512GB / 1TB',
+                        'Caméra': 'Triple 48MP + LiDAR',
+                        'Batterie': 'Jusqu\'à 29h vidéo',
+                        'Connectivité': '5G, Wi-Fi 6E, Bluetooth 5.3',
+                        'Matériau': 'Titane Grade 5'
                     }
                 },
                 {
-                    id: 'dove-savon-beauty-bar',
-                    title: 'Beauty Bar Original',
-                    brand: 'Dove',
-                    price: '3,15 €',
-                    description: 'Pain de beauté avec 1/4 de crème hydratante. Nettoie en douceur sans dessécher la peau.',
-                    mainImage: 'https://images.pexels.com/photos/4465421/pexels-photo-4465421.jpeg',
+                    id: 'samsung-galaxy-s24-ultra',
+                    title: 'Samsung Galaxy S24 Ultra',
+                    brand: 'Samsung',
+                    description: 'Smartphone premium avec S Pen intégré, écran Dynamic AMOLED 2X et système de caméras IA. Performance exceptionnelle pour les professionnels.',
+                    mainImage: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/4465421/pexels-photo-4465421.jpeg',
-                        'https://images.pexels.com/photos/6621315/pexels-photo-6621315.jpeg',
-                        'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
-                        'https://images.pexels.com/photos/4465205/pexels-photo-4465205.jpeg'
+                        'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg',
+                        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg',
+                        'https://images.pexels.com/photos/1739856/pexels-photo-1739856.jpeg',
+                        'https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg'
                     ],
                     specs: {
-                        'Poids': '100g',
-                        'Type de peau': 'Tous types',
-                        'Conditionnement': 'Carton de 48 savons',
-                        'pH': 'Neutre',
-                        'Composition': '1/4 de crème hydratante',
-                        'Parfum': 'Original doux'
+                        'Écran': '6.8" Dynamic AMOLED 2X',
+                        'Processeur': 'Snapdragon 8 Gen 3',
+                        'RAM': '12GB',
+                        'Stockage': '256GB / 512GB / 1TB',
+                        'Caméra': 'Quad 200MP',
+                        'S Pen': 'Intégré',
+                        'Batterie': '5000mAh'
                     }
                 },
                 {
-                    id: 'oral-b-dentifrice-complete',
-                    title: 'Dentifrice Complete Protection',
-                    brand: 'Oral-B',
-                    price: '2,95 €',
-                    description: 'Dentifrice protection complète avec fluor. Aide à prévenir les caries et renforce l\'émail.',
-                    mainImage: 'https://images.pexels.com/photos/298033/pexels-photo-298033.jpeg',
+                    id: 'google-pixel-8-pro',
+                    title: 'Google Pixel 8 Pro',
+                    brand: 'Google',
+                    description: 'Smartphone Google avec IA avancée, photographie computationnelle et Android pur. L\'expérience Android la plus authentique.',
+                    mainImage: 'https://images.pexels.com/photos/1739856/pexels-photo-1739856.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/298033/pexels-photo-298033.jpeg',
-                        'https://images.pexels.com/photos/4465421/pexels-photo-4465421.jpeg',
-                        'https://images.pexels.com/photos/6621034/pexels-photo-6621034.jpeg',
-                        'https://images.pexels.com/photos/7262946/pexels-photo-7262946.jpeg'
+                        'https://images.pexels.com/photos/1739856/pexels-photo-1739856.jpeg',
+                        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg',
+                        'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg',
+                        'https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg'
                     ],
                     specs: {
-                        'Contenance': '75ml',
-                        'Fluor': '1450 ppm',
-                        'Conditionnement': 'Carton de 12 tubes',
-                        'Âge': 'Adultes et enfants +6 ans',
-                        'Goût': 'Menthe fraîche',
-                        'Action': 'Anti-caries, anti-plaque'
+                        'Écran': '6.7" LTPO OLED',
+                        'Processeur': 'Google Tensor G3',
+                        'RAM': '12GB',
+                        'Stockage': '128GB / 256GB / 512GB',
+                        'Caméra': 'Triple 50MP',
+                        'IA': 'Magic Eraser, Live Translate',
+                        'Android': 'Version pure'
                     }
                 }
             ],
-            entretien: [
+            'ordinateurs': [
                 {
-                    id: 'ajax-nettoyant-universel',
-                    title: 'Nettoyant Universel Fraîcheur',
-                    brand: 'Ajax',
-                    price: '3,45 €',
-                    description: 'Nettoyant universel pour toutes surfaces. Élimine 99,9% des bactéries et laisse un parfum frais.',
-                    mainImage: 'https://images.pexels.com/photos/4239037/pexels-photo-4239037.jpeg',
+                    id: 'macbook-pro-16-m3-max',
+                    title: 'MacBook Pro 16" M3 Max',
+                    brand: 'Apple',
+                    description: 'Ordinateur portable haut de gamme avec puce M3 Max, écran Liquid Retina XDR et performance exceptionnelle pour les créatifs et professionnels.',
+                    mainImage: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/4239037/pexels-photo-4239037.jpeg',
-                        'https://images.pexels.com/photos/4239141/pexels-photo-4239141.jpeg',
-                        'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
-                        'https://images.pexels.com/photos/5591664/pexels-photo-5591664.jpeg'
+                        'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg',
+                        'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg',
+                        'https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg',
+                        'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg'
                     ],
                     specs: {
-                        'Contenance': '1,25L',
-                        'Usage': 'Multi-surfaces',
-                        'Conditionnement': 'Carton de 8 bidons',
-                        'Dilution': 'Prêt à l\'emploi',
-                        'Parfum': 'Fraîcheur océan',
-                        'Efficacité': '99,9% des bactéries éliminées'
+                        'Processeur': 'Apple M3 Max 16 cœurs',
+                        'GPU': '40 cœurs',
+                        'RAM': '36GB / 64GB / 128GB',
+                        'Stockage': '1TB / 2TB / 4TB / 8TB SSD',
+                        'Écran': '16.2" Liquid Retina XDR',
+                        'Autonomie': 'Jusqu\'à 22 heures',
+                        'Valeur': '3500€ - 6000€'
                     }
                 },
                 {
-                    id: 'ariel-lessive-poudre',
-                    title: 'Lessive Poudre Original',
-                    brand: 'Ariel',
-                    price: '12,90 €',
-                    description: 'Lessive en poudre haute performance. Efficace dès 30°C pour un lavage économique et écologique.',
-                    mainImage: 'https://images.pexels.com/photos/5591664/pexels-photo-5591664.jpeg',
+                    id: 'dell-xps-15-9530',
+                    title: 'Dell XPS 15 9530',
+                    brand: 'Dell',
+                    description: 'Ultrabook premium avec écran OLED 15.6", processeur Intel Core i9 et carte graphique RTX. Design élégant et performance professionnelle.',
+                    mainImage: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/5591664/pexels-photo-5591664.jpeg',
-                        'https://images.pexels.com/photos/4239141/pexels-photo-4239141.jpeg',
-                        'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
-                        'https://images.pexels.com/photos/5591799/pexels-photo-5591799.jpeg'
+                        'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg',
+                        'https://images.pexels.com/photos/276517/
+                        ```html
+                        'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg',
+                        'https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg',
+                        'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg'
                     ],
                     specs: {
-                        'Poids': '2,7kg',
-                        'Nombre de lavages': '40 lavages',
-                        'Température': 'Efficace dès 30°C',
-                        'Conditionnement': 'Carton de 4 boîtes',
-                        'Type': 'Linge blanc et couleur',
-                        'Parfum': 'Fraîcheur alpine'
+                        'Processeur': 'Intel Core i9-13900H',
+                        'GPU': 'NVIDIA RTX 4070',
+                        'RAM': '32GB / 64GB DDR5',
+                        'Stockage': '1TB / 2TB / 4TB SSD',
+                        'Écran': '15.6" OLED 3.5K',
+                        'Poids': '1.96 kg',
+                        'Valeur': '2500€ - 4000€'
+                    }
+                },
+                {
+                    id: 'hp-z8-fury-workstation',
+                    title: 'HP Z8 Fury Workstation',
+                    brand: 'HP',
+                    description: 'Station de travail haut de gamme avec processeurs Intel Xeon, jusqu\'à 3TB de RAM et cartes graphiques professionnelles. Pour les applications les plus exigeantes.',
+                    mainImage: 'https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg',
+                        'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg',
+                        'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg',
+                        'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg'
+                    ],
+                    specs: {
+                        'Processeur': 'Intel Xeon W-3400 Series',
+                        'GPU': 'NVIDIA RTX A6000',
+                        'RAM': 'Jusqu\'à 3TB DDR5 ECC',
+                        'Stockage': 'Jusqu\'à 32TB NVMe',
+                        'Connectivité': '10GbE, Thunderbolt 4',
+                        'Certification': 'ISV certifié',
+                        'Valeur': '8000€ - 25000€'
                     }
                 }
             ],
-            maison: [
+            'electromenager': [
                 {
-                    id: 'philips-ampoule-led',
-                    title: 'Ampoule LED E27 12W',
-                    brand: 'Philips',
-                    price: '8,95 €',
-                    description: 'Ampoule LED économique haute performance. Éclairage blanc chaud pour un confort optimal.',
-                    mainImage: 'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg',
+                    id: 'machine-laver-samsung-ai',
+                    title: 'Machine à Laver AI Control 9kg',
+                    brand: 'Samsung',
+                    description: 'Lave-linge intelligent avec IA qui optimise automatiquement les cycles de lavage. Fonction AddWash et connectivité SmartThings.',
+                    mainImage: 'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg',
-                        'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg',
-                        'https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg',
-                        'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg'
+                        'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
+                        'https://images.pexels.com/photos/7534554/pexels-photo-7534554.jpeg',
+                        'https://images.pexels.com/photos/4239019/pexels-photo-4239019.jpeg',
+                        'https://images.pexels.com/photos/4239141/pexels-photo-4239141.jpeg'
                     ],
                     specs: {
-                        'Puissance': '12W (équiv. 75W)',
-                        'Culot': 'E27',
-                        'Luminosité': '1055 lumens',
-                        'Conditionnement': 'Carton de 10 ampoules',
-                        'Durée de vie': '15 000 heures',
-                        'Température couleur': '2700K (blanc chaud)'
+                        'Capacité': '9 kg',
+                        'Vitesse essorage': '1400 tr/min',
+                        'Programmes': '14 cycles + AI',
+                        'Efficacité énergétique': 'A+++',
+                        'AddWash': 'Hublot supérieur',
+                        'Connectivité': 'Wi-Fi SmartThings',
+                        'Garantie': '10 ans moteur'
                     }
                 },
                 {
-                    id: 'pyrex-plat-verre',
-                    title: 'Plat Rectangulaire en Verre',
-                    brand: 'Pyrex',
-                    price: '15,90 €',
-                    description: 'Plat en verre borosilicate résistant aux chocs thermiques. Idéal pour la cuisson et la présentation.',
-                    mainImage: 'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg',
+                    id: 'climatiseur-daikin-inverter',
+                    title: 'Climatiseur Inverter Multi-Split',
+                    brand: 'Daikin',
+                    description: 'Système de climatisation réversible avec technologie Inverter pour efficacité énergétique maximale. Contrôle intelligent et fonctionnement silencieux.',
+                    mainImage: 'https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg',
                     images: [
-                        'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg',
-                        'https://images.pexels.com/photos/1497198/pexels-photo-1497198.jpeg',
-                        'https://images.pexels.com/photos/1829278/pexels-photo-1829278.jpeg',
-                        'https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg'
+                        'https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg',
+                        'https://images.pexels.com/photos/6758773/pexels-photo-6758773.jpeg',
+                        'https://images.pexels.com/photos/5824865/pexels-photo-5824865.jpeg',
+                        'https://images.pexels.com/photos/4239019/pexels-photo-4239019.jpeg'
                     ],
                     specs: {
-                        'Dimensions': '32 x 20 x 5 cm',
-                        'Matériau': 'Verre borosilicate',
-                        'Capacité': '2,5L',
-                        'Conditionnement': 'Carton de 6 plats',
-                        'Température': '-40°C à +300°C',
-                        'Utilisation': 'Four, micro-ondes, lave-vaisselle'
+                        'Puissance': '5.0 kW',
+                        'Type': 'Réversible chaud/froid',
+                        'SEER': '8.73 (A+++)',
+                        'SCOP': '5.15 (A+++)',
+                        'Niveau sonore': '19 dB(A)',
+                        'Filtration': 'Plasma ioniseur',
+                        'Contrôle': 'Wi-Fi + télécommande'
+                    }
+                },
+                {
+                    id: 'micro-ondes-panasonic-inverter',
+                    title: 'Micro-Ondes Inverter 32L',
+                    brand: 'Panasonic',
+                    description: 'Four micro-ondes avec technologie Inverter pour cuisson uniforme. Fonction grill et vapeur intégrées. Design moderne en acier inoxydable.',
+                    mainImage: 'https://images.pexels.com/photos/4239019/pexels-photo-4239019.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/4239019/pexels-photo-4239019.jpeg',
+                        'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
+                        'https://images.pexels.com/photos/7534554/pexels-photo-7534554.jpeg',
+                        'https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg'
+                    ],
+                    specs: {
+                        'Capacité': '32 litres',
+                        'Puissance': '1000W micro-ondes, 1300W grill',
+                        'Technologie': 'Inverter',
+                        'Programmes': '18 automatiques',
+                        'Fonctions': 'Grill, vapeur, décongélation',
+                        'Plateau': 'Céramique 36cm',
+                        'Dimensions': '52.3 x 39.4 x 31.0 cm'
+                    }
+                },
+                {
+                    id: 'lave-vaisselle-bosch-silence',
+                    title: 'Lave-Vaisselle SilencePlus 60cm',
+                    brand: 'Bosch',
+                    description: 'Lave-vaisselle ultra-silencieux avec technologie PerfectDry et système AquaStop. 13 couverts avec panier flexible et programmes EcoSilence.',
+                    mainImage: 'https://images.pexels.com/photos/7534554/pexels-photo-7534554.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/7534554/pexels-photo-7534554.jpeg',
+                        'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
+                        'https://images.pexels.com/photos/4239019/pexels-photo-4239019.jpeg',
+                        'https://images.pexels.com/photos/4239141/pexels-photo-4239141.jpeg'
+                    ],
+                    specs: {
+                        'Capacité': '13 couverts',
+                        'Niveau sonore': '42 dB',
+                        'Efficacité énergétique': 'A+++',
+                        'Programmes': '6 + VarioSpeed Plus',
+                        'AquaStop': 'Protection anti-fuite',
+                        'PerfectDry': 'Séchage automatique',
+                        'Panier': '3 niveaux flexibles'
+                    }
+                }
+            ],
+            'animaux': [
+                {
+                    id: 'royal-canin-maxi-adult',
+                    title: 'Croquettes Maxi Adult',
+                    brand: 'Royal Canin',
+                    description: 'Alimentation complète pour chiens de grande taille adultes. Formule adaptée aux besoins nutritionnels spécifiques avec soutien articulaire.',
+                    mainImage: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
+                        'https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg',
+                        'https://images.pexels.com/photos/773958/pexels-photo-773958.jpeg',
+                        'https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg'
+                    ],
+                    specs: {
+                        'Poids': '15 kg',
+                        'Âge': 'Chiens adultes (15 mois à 5 ans)',
+                        'Taille': 'Grande race (26-44 kg)',
+                        'Protéines': '26%',
+                        'Matières grasses': '17%',
+                        'Glucosamine': 'Soutien articulaire',
+                        'Conservation': '18 mois'
+                    }
+                },
+                {
+                    id: 'hills-feline-adult',
+                    title: 'Hill\'s Science Plan Feline Adult',
+                    brand: 'Hill\'s',
+                    description: 'Nutrition scientifiquement formulée pour chats adultes. Soutient la santé digestive, immunitaire et maintient un poids optimal.',
+                    mainImage: 'https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg',
+                        'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
+                        'https://images.pexels.com/photos/773958/pexels-photo-773958.jpeg',
+                        'https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg'
+                    ],
+                    specs: {
+                        'Poids': '10 kg',
+                        'Âge': 'Chats adultes (1-7 ans)',
+                        'Protéines': '32%',
+                        'Matières grasses': '20%',
+                        'Fibres': '2.0%',
+                        'Oméga 6': 'Pelage brillant',
+                        'Antioxydants': 'Système immunitaire'
+                    }
+                },
+                {
+                    id: 'purina-proplan-senior',
+                    title: 'Pro Plan Senior OptiNutris',
+                    brand: 'Purina Pro Plan',
+                    description: 'Alimentation spécialisée pour chiens seniors avec complexe OptiNutris. Soutient la vitalité et maintient les fonctions cognitives.',
+                    mainImage: 'https://images.pexels.com/photos/773958/pexels-photo-773958.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/773958/pexels-photo-773958.jpeg',
+                        'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
+                        'https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg',
+                        'https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg'
+                    ],
+                    specs: {
+                        'Poids': '12 kg',
+                        'Âge': 'Chiens seniors (+7 ans)',
+                        'OptiNutris': 'Complexe nutritionnel',
+                        'Protéines': '28%',
+                        'Matières grasses': '12%',
+                        'Cognition': 'Soutien cérébral',
+                        'Articulations': 'Glucosamine naturelle'
+                    }
+                }
+            ],
+            'autres-electriques': [
+                {
+                    id: 'aspirateur-dyson-v15',
+                    title: 'Aspirateur Sans Fil V15 Detect',
+                    brand: 'Dyson',
+                    description: 'Aspirateur sans fil avec technologie laser pour détecter la poussière invisible. Puissance d\'aspiration intelligente et autonomie prolongée.',
+                    mainImage: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg',
+                        'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
+                        'https://images.pexels.com/photos/7534554/pexels-photo-7534554.jpeg',
+                        'https://images.pexels.com/photos/4239019/pexels-photo-4239019.jpeg'
+                    ],
+                    specs: {
+                        'Autonomie': 'Jusqu\'à 60 minutes',
+                        'Technologie': 'Laser Slim Fluffy',
+                        'Cyclone': '14 cyclones Radial Root',
+                        'Écran LCD': 'Données en temps réel',
+                        'Filtration': 'HEPA complet',
+                        'Accessoires': '8 outils inclus',
+                        'Poids': '3.05 kg'
+                    }
+                },
+                {
+                    id: 'cafetiere-delonghi-dinamica',
+                    title: 'Machine à Café Dinamica Plus',
+                    brand: 'De\'Longhi',
+                    description: 'Machine à café automatique avec broyeur intégré et système de mousse automatique. Interface tactile et connectivité smartphone.',
+                    mainImage: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg',
+                        'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg',
+                        'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
+                        'https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg'
+                    ],
+                    specs: {
+                        'Broyeur': 'Acier inoxydable 13 réglages',
+                        'Pression': '15 bars',
+                        'Réservoir': '1.8L eau + 350g grains',
+                        'Écran': 'Tactile couleur 3.5"',
+                        'Programmes': '18 boissons',
+                        'Connectivité': 'Wi-Fi + App',
+                        'Nettoyage': 'Automatique'
+                    }
+                },
+                {
+                    id: 'robot-patissier-kitchenaid',
+                    title: 'Robot Pâtissier Artisan 5KSM175',
+                    brand: 'KitchenAid',
+                    description: 'Robot pâtissier iconique avec bol en acier inoxydable 4.8L. Moteur puissant et plus de 15 accessoires optionnels pour toutes vos préparations.',
+                    mainImage: 'https://images.pexels.com/photos/4686820/pexels-photo-4686820.jpeg',
+                    images: [
+                        'https://images.pexels.com/photos/4686820/pexels-photo-4686820.jpeg',
+                        'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg',
+                        'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg',
+                        'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    ],
+                    specs: {
+                        'Bol': '4.8L acier inoxydable',
+                        'Puissance': '300W',
+                        'Vitesses': '10 + fonction pulse',
+                        'Mouvement': 'Planétaire',
+                        'Accessoires': 'Fouet, crochet, batteur',
+                        'Hub': 'Compatible 15+ accessoires',
+                        'Garantie': '5 ans'
                     }
                 }
             ]
         };
 
-        let currentCategory = '';
+        let currentRubrique = '';
 
         // Navigation functions
         function showSection(sectionId) {
@@ -1295,41 +1721,46 @@
             window.scrollTo(0, 0);
         }
 
-        function showCategory(categoryName) {
-            currentCategory = categoryName;
-            showSection(`category-${categoryName}`);
-            populateProducts(categoryName);
+        function showRubrique(rubriqueName) {
+            currentRubrique = rubriqueName;
+            showSection(`rubrique-${rubriqueName}`);
+            populateProducts(rubriqueName);
         }
 
-        function populateProducts(categoryName) {
-            const container = document.getElementById(`${categoryName}-products`);
-            const categoryProducts = products[categoryName] || [];
+        function populateProducts(rubriqueName) {
+            const container = document.getElementById(`${rubriqueName}-products`);
+            const rubriqueProducts = products[rubriqueName] || [];
             
-            container.innerHTML = categoryProducts.map(product => `
-                <div class="product-card" onclick="showProductDetail('${product.id}', '${categoryName}')">
-                    <div class="product-image" style="background-image: url('${product.mainImage}')"></div>
+            container.innerHTML = rubriqueProducts.map(product => `
+                <div class="product-card" onclick="showProductDetail('${product.id}', '${rubriqueName}')">
+                    <div class="product-image" style="background-image: url('${product.mainImage}')">
+                        <div class="product-badge">Premium</div>
+                    </div>
                     <div class="product-info">
                         <div class="product-title">${product.title}</div>
                         <div class="product-brand">${product.brand}</div>
-                        <div class="product-description">${product.description.substring(0, 80)}...</div>
-                        <div class="product-price">${product.price}</div>
+                        <div class="product-description">${product.description.substring(0, 120)}...</div>
+                        <div class="product-features">
+                            <div class="feature-tag">Qualité Pro</div>
+                            <div class="feature-tag">Garantie</div>
+                            <div class="feature-tag">SAV</div>
+                        </div>
                     </div>
                 </div>
             `).join('');
         }
 
-        function showProductDetail(productId, categoryName) {
+        function showProductDetail(productId, rubriqueName) {
             // Find the product
-            const product = products[categoryName].find(p => p.id === productId);
+            const product = products[rubriqueName].find(p => p.id === productId);
             if (!product) return;
 
             // Update back button
-            document.getElementById('back-to-category').onclick = () => showCategory(categoryName);
+            document.getElementById('back-to-rubrique').onclick = () => showRubrique(rubriqueName);
 
             // Populate product details
             document.getElementById('product-title').textContent = product.title;
             document.getElementById('product-brand').textContent = product.brand;
-            document.getElementById('product-price').textContent = product.price;
             document.getElementById('product-description').textContent = product.description;
 
             // Set main image
@@ -1370,7 +1801,7 @@
         // Contact form handling
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Merci pour votre message ! Nous vous recontacterons bientôt.');
+            alert('Merci pour votre demande ! Notre équipe vous contactera dans les plus brefs délais pour vous établir un devis personnalisé.');
             this.reset();
         });
 
@@ -1381,4 +1812,3 @@
     </script>
 </body>
 </html>
-                        
